@@ -33,6 +33,7 @@ body{
     border-radius: 20px 20px;
     background-color: rgba(13, 98, 255, 0.568);
     box-shadow: 2px 4px 8px black;
+    align-items: center;
 }
 
 .principal h2{
@@ -50,23 +51,22 @@ body{
 
 .container-gal{
     width: 95%;
-    align-items: center;
-
+    padding: -5% ;
 }
 
 div.galeria{
-    margin: 20px 0px;
-    margin-left: 10%;
+    margin: 20px;
+    margin-left: 12vh;
     width: 100px;
-    display:inline-block;
+    display:inline-table;
     align-items: center;
-
+    
 }
 
 .galeria img{
     width: 100px;
     height: 100px;
-    margin: 0 auto;
+    border-radius: 20px 20px;
 }
 
 .galeria p{
@@ -80,11 +80,15 @@ div.galeria{
     text-align:center;
 }
 
-#boton{
-    margin:5%;
+#btnEnviar{
+    margin-left:45%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px 20px;
+    
 }
 
-#boton:hover{
+#btnEnviar:hover{
     transform:scale(1.2);
 }
 
