@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&family=Tourney:wght@100&display=swap');
+
+body{
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15%;
+}
+
+.contenedor{
+    padding:5%;
+    margin:5%;
+    background-color: rgba(4, 139, 250, 0.479);
+    box-shadow: 5px 5px 7px 10px rgba(34, 37, 37, 0.514);
+    
+}
+
+.encabezado{
+    font-family: 'Tourney', cursive;
+    padding: 5%;
+    margin:5%;
+    text-align: center;
+    border-radius: 2px 20px;
+    background-color: rgba(255, 255, 255, 0.658);
+    box-shadow: 2px 4px 8px black;
+    font-size: auto;
+    color: rgb(19, 22, 61);
+    text-shadow: 2px 4px 8px black;
+}
+
+.principal{
+    padding: 5%;
+    border-radius: 20px 20px;
+    background-color: rgba(13, 98, 255, 0.568);
+    box-shadow: 2px 4px 8px black;
+}
+
+.principal h2{
+    text-align: center;
+}
+
+.formulario{
+    font-family: 'Quantico', sans-serif;
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 20px 2px;
+    padding:10px;
+    align-items: center;
+    text-align: center;
+}
+
+.container-gal{
+    width: 95%;
+    align-items: center;
+
+}
+
+div.galeria{
+    margin: 20px 0px;
+    margin-left: 10%;
+    width: 100px;
+    display:inline-block;
+    align-items: center;
+
+}
+
+.galeria img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.galeria p{
+    text-align: center;
+    font-family: 'Quantico', sans-serif;
+}
+
+#inpuntCantidad{
+    width: 5%;
+    padding: 5px;
+    text-align:center;
+}
+
+#boton{
+    margin:5%;
+}
+
+#boton:hover{
+    transform:scale(1.2);
+}
+
+.piePag{
+    text-align: right;
+}
