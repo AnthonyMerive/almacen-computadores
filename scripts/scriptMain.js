@@ -1,8 +1,18 @@
 let listar = document.getElementById('listar');
 
+let boton = document.getElementById('btnDesc');
+
+boton.addEventListener('click', capturaDesc)
+
 document.addEventListener('DOMContentLoaded', listarData)
 
-let boton = document.getElementById('btnDesc');
+let form = document.getElementById('form');
+
+form.addEventListener('submit',formSubmit)
+
+function formSubmit(e){
+    e.preventDefault();
+  }
 
 function capturaDesc() {
     let desc = document.querySelector('#inputDesc').value;
@@ -15,21 +25,19 @@ function guardarLocalStorage(desc) {
     listarData();
 }
 
-boton.addEventListener('click', capturaDesc)
-
 function listarData() {
 
     let cant = localStorage.getItem('Cantidad');
 
-    let desc = localStorage.getItem('Descuento');
+    let descIni = localStorage.getItem('Descuento');
 
     let total = 0;
 
     cant = cant * 800000;
 
-    desc = (desc * cant) / 100;
+    descTotal = (descIni * cant) / 100;
 
-    total = cant - desc;
+    total = cant - descTotal;
 
     listar.innerHTML = `
     <table>
@@ -40,10 +48,13 @@ function listarData() {
          <td>$${cant}</td>
       </tr>
       <tr>
-        <th>Total a pagar</th>
+        <th>Total a pagar con un descuento del ${descIni}%</th>
       </tr>
       <tr>
          <td>$${total}</td>
+      </tr>
+      <tr>
+        <th>Ahorro <br>$${descTotal}</th>
       </tr>
      </table>
     `;

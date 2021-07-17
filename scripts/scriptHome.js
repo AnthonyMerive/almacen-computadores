@@ -1,27 +1,24 @@
 
 let boton = document.getElementById('btnEnviar');
 
-
-boton.addEventListener('click',capturaDatos)
-
+boton.addEventListener('click', capturaDatos)
 
 let form = document.getElementById('form');
 
+form.addEventListener('submit',formSubmit)
 
-//form.addEventListener('submit',formSumbit)
+function formSubmit(e){
+    e.preventDefault();
+  }
 
-//function formSumbit(e){
-  //e.preventDefault();
-//}
-
-  function capturaDatos(){
+function capturaDatos() {
     let cantidad = document.querySelector('#inpuntCantidad').value;
 
     guardarLocalStorage(cantidad);
-  }
+}
 
-  function guardarLocalStorage(cant){
+function guardarLocalStorage(cant) {
 
-    localStorage.setItem('Cantidad',cant);
+    localStorage.setItem('Cantidad', cant);
     listarData();
-  }
+}

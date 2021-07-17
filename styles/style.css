@@ -40,7 +40,7 @@ body{
     text-align: center;
 }
 
-.formulario{
+#form{
     font-family: 'Quantico', sans-serif;
     background-color: rgba(255, 255, 255, 0.658);
     border-radius: 20px 2px;
