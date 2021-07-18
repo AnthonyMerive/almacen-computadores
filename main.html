@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <title>Cotizacion</title>
 </head>
+
 <body>
-    <form id="form">
-    <h2>Orden de compra</h2>
-    <div id="listar"></div>
-    <label>
-        Descuento:
-    </label>
-    
-        <input type="number" min="0" max="100" id="inputDesc">
-    
+    <form id="form1">
+        <h2>COTIZACION</h2>
+        <br>
+        <div id="listar"></div>
+        <br>
+        <label>
+            <strong>Descuento:</strong>
+        </label>
+
+        <input type="number" min="1" max="100" id="inputDesc"><strong>%</strong>
+        <br>
         <button id="btnDesc">Aplica descuento</button>
 
     </form>
+    <br>
+    <button onclick="location.href='home.html'" id="btnEnviar">Regresar</button>
     <script src="./scripts/scriptMain.js"></script>
+
+    <footer class="piePag">
+        <p>© GitHub:AnthonyMerive</p>
+    </footer>
 </body>
+
 </html>

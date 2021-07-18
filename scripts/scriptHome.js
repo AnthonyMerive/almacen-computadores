@@ -22,3 +22,5 @@ function guardarLocalStorage(cant) {
     localStorage.setItem('Cantidad', cant);
     listarData();
 }
+
+localStorage.clear();
