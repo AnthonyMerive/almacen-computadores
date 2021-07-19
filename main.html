@@ -9,10 +9,12 @@
     <title>Cotizacion</title>
 </head>
 
-<body>
+<body class="contenedor">
+    <header class="encabezado">
+        <h1>Cotizacion</h1>
+    </header>
+<main class="principal">
     <form id="form1">
-        <h2>COTIZACION</h2>
-        <br>
         <div id="listar"></div>
         <br>
         <label>
@@ -22,12 +24,11 @@
         <input type="number" min="1" max="100" id="inputDesc"><strong>%</strong>
         <br>
         <button id="btnDesc">Aplica descuento</button>
-
     </form>
     <br>
     <button onclick="location.href='home.html'" id="btnEnviar">Regresar</button>
     <script src="./scripts/scriptMain.js"></script>
-
+</main>
     <footer class="piePag">
         <p>© GitHub:AnthonyMerive</p>
     </footer>

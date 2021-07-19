@@ -5,11 +5,11 @@ boton.addEventListener('click', capturaDatos)
 
 let form = document.getElementById('form');
 
-form.addEventListener('submit',formSubmit)
+form.addEventListener('submit', formSubmit)
 
-function formSubmit(e){
+function formSubmit(e) {
     e.preventDefault();
-  }
+}
 
 function capturaDatos() {
     let cantidad = document.querySelector('#inpuntCantidad').value;

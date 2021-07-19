@@ -1,77 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico&family=Tourney:wght@100&display=swap');
 
-body{
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 15%;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.contenedor{
-    padding:5%;
-    margin:5%;
-    background-color: rgba(4, 139, 250, 0.479);
-    box-shadow: 5px 5px 7px 10px rgba(34, 37, 37, 0.514);
+html {
+    height: 100%; /*hace que body ocupe 100% del HTML*/
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(../images/background.jpg);
+    font-size: 1.2rem;
+    min-height: 100%; /*ocupa 100% de la pantalla*/
+}
+
+.contenedor > *{
+    box-shadow:-1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
     
 }
 
 .encabezado{
     font-family: 'Tourney', cursive;
-    padding: 5%;
-    margin:5%;
-    text-align: center;
-    border-radius: 2px 20px;
-    background-color: rgba(255, 255, 255, 0.658);
-    box-shadow: 2px 4px 8px black;
-    font-size: auto;
-    color: rgb(19, 22, 61);
-    text-shadow: 2px 4px 8px black;
+    grid-area: header; /*identifico cada grid area*/
+    background-color: rgba(73, 184, 248, 0.651);
 }
 
 .principal{
-    padding: 5%;
-    border-radius: 20px 20px;
-    background-color: rgba(13, 98, 255, 0.568);
-    box-shadow: 2px 4px 8px black;
-    align-items: center;
-}
-
-.principal h2{
-    text-align: center;
-}
-
-#form{
     font-family: 'Quantico', sans-serif;
-    background-color: rgba(255, 255, 255, 0.658);
-    border-radius: 20px 2px;
-    padding:10px;
-    align-items: center;
-    text-align: center;
-}
-
-.container-gal{
-    width: 95%;
-    padding: -5% ;
-}
-
-div.galeria{
-    margin: 20px;
-    margin-left: 12vh;
-    width: 100px;
-    display:inline-table;
-    align-items: center;
+    grid-area: main; /*identifico cada grid area*/
+    background-color: rgba(1, 255, 242, 0.651);
     
 }
 
-.galeria img{
-    width: 100px;
-    height: 100px;
-    border-radius: 20px 20px;
+.contenedorGal{
+    grid-area: galery; /*identifico cada grid area*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*se asigna tamaño a las columnas dependiendo del pixelado de la pagina*/
+    /*importante, si son mas de 4 imagenes colocar autofill no autofit*/
+    grid-auto-rows: 250px; /*se ajusta tamaño de las filas*/
+    gap: 20px;
+    padding:20px;
+    
 }
 
-.galeria p{
-    text-align: center;
+.galeria{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.galeria:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.foto1{
+    background-image: url(../images/galeria1.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.foto2{
+    background-image: url(../images/galeria2.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.foto3{
+    background: url(../images/galeria3.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+
+.piePag{
+    grid-area: footer; /*identifico cada grid area*/
+    background-color: rgba(0, 44, 70, 0.651);
     font-family: 'Quantico', sans-serif;
+    text-align: right;
+}
+
+.contenedor{
+    display: grid; /*visualiza en grid el contenedor*/
+    gap: 20px;  /*da separacion*/
+    grid-template-areas: /*defino el nombre y ubicacion de las areas*/
+        "header"
+        "main"
+        "galery"
+        "footer"
+    ;
 }
 
 #inpuntCantidad{
@@ -81,10 +109,8 @@ div.galeria{
 }
 
 #btnEnviar{
-    margin-left:45%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     border-radius: 20px 20px;
+    padding: 5px;
     
 }
 
@@ -92,31 +118,17 @@ div.galeria{
     transform:scale(1.2);
 }
 
-.piePag{
-    text-align: right;
-}
+@media (min-width: 600px){/*diseño responsive:modo tablet*/
 
+        .principal{
+            margin: 50px;
+        }
 
-#form1{
-    background-color: rgba(146, 195, 207, 0.747);
-    box-shadow: 2px 4px 8px black;
-    font-family: 'Quantico', sans-serif;
-    border-radius: 20px 2px;
-    padding:10px;
-    align-items: center;
-    text-align: center;
-}
+        .encabezado{
+            margin: 15px;
+        }
 
-#form1 h2{
-    background-color: rgba(249, 252, 253, 0.747);
-    box-shadow: 2px 4px 8px black;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-}
-
-#inputDesc{
-    width: 10%;
-    padding: 5px;
-    text-align:center;
-}
+        .piePag{
+            margin: 15px;
+        }
+    }

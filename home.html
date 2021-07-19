@@ -9,62 +9,39 @@
     <title>Almacen de computadoras</title>
 </head>
 
-<body>
-    <div class="contenedor">
+<body class="contenedor">
 
-        <header class="encabezado">
-            <h1>ALMACEN DE COMPUTADORAS</h1>
-        </header>
+    <header class="encabezado">
+        <h1>ALMACEN DE COMPUTADORAS</h1>
+    </header>
 
-        <main class="principal">
+    <main class="principal">
+        <form id="form">
+            <h2>Haga su cotizacion en linea</h2>
+            <label id="cantidad" class="cantidad">
+                Cantidad de computadores a comprar:
+            </label>
+            <input id="inpuntCantidad">
+        </form>
+        <br>
+        <button onclick="location.href='main.html'" id="btnEnviar">Enviar</button>
+        <div class="contenedorGal">
+            <div class="galeria foto1">
+            </div>
 
-            <form id="form">
-                <h2>Haga su cotizacion en linea</h2>
-                <label id="cantidad" class="cantidad">
-                    Cantidad de computadores a comprar:
-                </label>
-                <input id="inpuntCantidad">
+            <div class="galeria foto2">
+            </div>
 
-            </form>
-
-
-            <button onclick="location.href='main.html'" id="btnEnviar">Enviar</button>
+            <div class="galeria foto3">
+            </div>
+        </div>
+    </main>
 
 
-            <div class="container-gal">
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="./images/galeria1.png" alt="" title="HP">
-                    </div>
-                    <div class="pie">
-                        <p>HP</p>
-                    </div>
-                </div>
+    <footer class="piePag">
+        <p>© GitHub:AnthonyMerive</p>
+    </footer>
 
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="./images/galeria2.jpg" alt="" title="Lenovo">
-                    </div>
-                    <div class="pie">
-                        <p>Lenovo</p>
-                    </div>
-                </div>
-
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="./images/galeria3.jpg" alt="" title="Dell">
-                    </div>
-                    <div class="pie">
-                        <p>Dell</p>
-                    </div>
-                </div>
-        </main>
-
-        <footer class="piePag">
-            <p>© GitHub:AnthonyMerive</p>
-        </footer>
-
-    </div>
 
 
 

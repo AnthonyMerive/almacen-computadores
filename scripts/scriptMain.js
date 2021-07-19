@@ -23,7 +23,7 @@ function guardarLocalStorage(desc) {
 
     localStorage.setItem('Descuento', desc);
     listarData();
-    
+
 }
 
 function listarData() {
@@ -34,27 +34,28 @@ function listarData() {
 
     let total = 0;
 
-    if(descIni === null){
+    if (descIni === null) {
         alert("Los equipos estan valorados en $800.000 c/u, Ingrese su descuento en la pagina tomando en cuenta que el descuento maximo es del 50%");
         return 0;
-    }else{
+    } else {
 
 
-    if(descIni > 50){
-        alert("El maximo descuento es del 50%");
-        return 0;
-    }
-    else{
+        if (descIni > 50) {
+            alert("El maximo descuento es del 50%");
+            return 0;
+        }
+        else {
 
-    cant = cant * 800000;
+            cant = cant * 800000;
 
-    descTotal = (descIni * cant) / 100;
+            descTotal = (descIni * cant) / 100;
 
-    total = cant - descTotal;
-    }
+            total = cant - descTotal;
+        }
 
-    listar.innerHTML = `
+        listar.innerHTML = `
     <table style="margin: 0 auto;";>
+        <th>
       <tr>
       <th>Total a pagar: <br><br>$${cant}</th>
       </tr>
@@ -64,5 +65,5 @@ function listarData() {
       </tr>
      </table>
     `;
-}
+    }
 }
