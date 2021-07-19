@@ -15,8 +15,12 @@ body{
     color:white;
     text-shadow: 2px 4px 8px black;
     background-image: url(../images/background.jpg);
+    /*siempre la imagen de fondo debe tener este atributo*/
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size:cover;
+    /*-----------------------------------------------*/
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     min-height: 100%; /*ocupa 100% de la pantalla*/
@@ -153,5 +157,17 @@ body{
 
         .piePag{
             margin: 15px;
+        }
+
+        #inpuntCantidad{
+            width: 5%;
+            padding: 5px;
+            text-align:center;
+        }
+
+        #inputDesc{
+            width: 5%;
+            margin:5px;
+            text-align:center;
         }
     }
