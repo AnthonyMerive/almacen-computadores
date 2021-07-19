@@ -12,8 +12,12 @@ html {
 }
 
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    text-shadow: 2px 4px 8px black;
     background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size:cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     min-height: 100%; /*ocupa 100% de la pantalla*/
 }
@@ -29,13 +33,14 @@ body{
 .encabezado{
     font-family: 'Tourney', cursive;
     grid-area: header; /*identifico cada grid area*/
-    background-color: rgba(73, 184, 248, 0.651);
+    background-color: rgba(16, 141, 214, 0.651);
+    text-shadow: 2px 4px 8px rgb(0, 0, 0);
 }
 
 .principal{
     font-family: 'Quantico', sans-serif;
     grid-area: main; /*identifico cada grid area*/
-    background-color: rgba(1, 255, 242, 0.651);
+    background-color: rgba(30, 30, 43, 0.61);
     
 }
 
@@ -103,7 +108,7 @@ body{
 }
 
 #inpuntCantidad{
-    width: 5%;
+    width: 10%;
     padding: 5px;
     text-align:center;
 }
@@ -117,6 +122,24 @@ body{
 #btnEnviar:hover{
     transform:scale(1.2);
 }
+
+#btnDesc{
+    border-radius: 20px 20px;
+    padding: 5px;
+    
+}
+
+#btnDesc:hover{
+    transform:scale(1.02);
+}
+
+#inputDesc{
+    width: 10%;
+    margin:5px;
+    text-align:center;
+}
+
+
 
 @media (min-width: 600px){/*diseño responsive:modo tablet*/
 
